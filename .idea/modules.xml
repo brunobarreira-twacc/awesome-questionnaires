@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/awesome-questionnaires.iml" filepath="$PROJECT_DIR$/.idea/awesome-questionnaires.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/awesome-questionnaires.iml" filepath="$PROJECT_DIR$/.idea/modules/awesome-questionnaires.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/awesome-questionnaires.main.iml" filepath="$PROJECT_DIR$/.idea/modules/awesome-questionnaires.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/awesome-questionnaires.test.iml" filepath="$PROJECT_DIR$/.idea/modules/awesome-questionnaires.test.iml" />
     </modules>
   </component>
 </project>
