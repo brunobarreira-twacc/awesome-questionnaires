@@ -6,7 +6,7 @@ Crie e gerencie questionarios incriveis. Questionarios sao grupos de perguntas e
 
 ## Stack Tecnologica:
 
-- Java 17.0.8
+- Java 21
 - Gradle
 
 ## CLI
