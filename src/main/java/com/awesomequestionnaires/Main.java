@@ -37,6 +37,11 @@ public class Main {
                         System.out.println("4 - Publicar agora? Sim/Nao");
                         statusQuestionario = sc.nextLine();
 
+                        if (!"sim".equalsIgnoreCase(statusQuestionario) && !"não".equalsIgnoreCase(statusQuestionario)){
+                            System.out.println("Erro: Valor inválido, tente novamente");
+                            System.out.println("4 - Publicar agora? Sim/Nao");
+                        }
+
                         if (statusQuestionario.equals("sim") || statusQuestionario.equals("SIM")){
                         System.out.println("Seu questionario: " + nomeQuestionario + " foi publicado!");
                         statusQuestionario = "PUBLISHED";
@@ -49,11 +54,8 @@ public class Main {
                             System.out.println(statusQuestionario);
                         }
 
-                        if (!statusQuestionario.equals("não") || !statusQuestionario.equals("NÃO") || !statusQuestionario.equals("sim") || !statusQuestionario.equals("SIM")){
-                            System.out.println("Erro: Valor inválido, tente novamente");
-                            System.out.println("4 - Publicar agora? Sim/Nao");
-                            statusQuestionario = sc.nextLine();
-                        }
+                        System.out.println( nomeQuestionario + " | " +descricaoQuestionario+ " | " + statusQuestionario);
+
 
                         break;
                     case 1:
