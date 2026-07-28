@@ -21,9 +21,8 @@ public class Main {
 
             Pattern padraoValidacaoInput = Pattern.compile("[0-3]");
 
-            Pattern validacao = padraoValidacaoInput.matcher(opcao).pattern();
+            padraoValidacaoInput.matcher(opcao).pattern();
 
-//            System.out.println(validacao);
 
                 switch (Integer.parseInt(opcao)) {
                     case 0:
