@@ -28,7 +28,9 @@ public class Main {
                 switch (Integer.parseInt(opcao)) {
                     case 0:
                         loopingMenu = false;
-                        System.out.println(" 1 - Nome do questionario");
+                        System.out.println(" 1 - Digite o nome do questionario:");
+                        String nome = sc.nextLine();
+                        System.out.println("O nome do questionário é:" + nome);
                         break;
                     case 1:
                         System.out.println("Opção não implementada, por favor, tente novamente");
