@@ -23,12 +23,12 @@ public class Main {
 
             Pattern validacao = padraoValidacaoInput.matcher(opcao).pattern();
 
-            System.out.println(validacao);
+//            System.out.println(validacao);
 
                 switch (Integer.parseInt(opcao)) {
                     case 0:
-                        System.out.println("Opção não implementada, por favor, tente novamente");
-                        System.out.println(menuPrincipal);
+                        loopingMenu = false;
+                        System.out.println(" 1 - Nome do questionario");
                         break;
                     case 1:
                         System.out.println("Opção não implementada, por favor, tente novamente");
