@@ -5,6 +5,9 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
+        String nomeQuestionario;
+        String descricaoQuestionario;
+        String statusQuestionario;
         Scanner sc = new Scanner(System.in);
         boolean loopingMenu = true;
 
@@ -27,9 +30,31 @@ public class Main {
                 switch (Integer.parseInt(opcao)) {
                     case 0:
                         loopingMenu = false;
-                        System.out.println(" 1 - Digite o nome do questionario:");
-                        String nome = sc.nextLine();
-                        System.out.println("O nome do questionário é:" + nome);
+                        System.out.println("1 - Digite o nome do questionario:");
+                        nomeQuestionario = sc.nextLine();
+                        System.out.println("2 - Descrição do questionario:");
+                        descricaoQuestionario = sc.nextLine();
+                        System.out.println("4 - Publicar agora? Sim/Nao");
+                        statusQuestionario = sc.nextLine();
+
+                        if (statusQuestionario.equals("sim") || statusQuestionario.equals("SIM")){
+                        System.out.println("Seu questionario: " + nomeQuestionario + " foi publicado!");
+                        statusQuestionario = "PUBLISHED";
+                            System.out.println(statusQuestionario);
+                    }
+
+                        if (statusQuestionario.equals("não") || statusQuestionario.equals("NÃO")){
+                            System.out.println("Seu questionario: " + nomeQuestionario + " não foi publicado!");
+                            statusQuestionario = "DRAFT";
+                            System.out.println(statusQuestionario);
+                        }
+
+                        if (!statusQuestionario.equals("não") || !statusQuestionario.equals("NÃO") || !statusQuestionario.equals("sim") || !statusQuestionario.equals("SIM")){
+                            System.out.println("Erro: Valor inválido, tente novamente");
+                            System.out.println("4 - Publicar agora? Sim/Nao");
+                            statusQuestionario = sc.nextLine();
+                        }
+
                         break;
                     case 1:
                         System.out.println("Opção não implementada, por favor, tente novamente");
