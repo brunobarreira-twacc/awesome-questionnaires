@@ -8,7 +8,7 @@
 
 **Descrição técnica:**
 
-O objetivo deste item de trabalho é permitir que o usuário navegue do menu principal fluxo de criação de questionários, nesse fluxo o usuário preenche a sequência inicial de Nome, Descrição e escolhe se o questionári o será publicado sim ou não.
+O objetivo deste item de trabalho é permitir que o usuário navegue do menu principal para o fluxo de criação de questionários, nesse fluxo o usuário preenche a sequência inicial de Nome, Descrição e escolhe se o questionário será publicado sim ou não.
 
 Após selecionar o item 0(zero) do menu principal, a seguinte sequência aparece ao usuário:
 
@@ -43,16 +43,16 @@ Publicar agora? Sim/Não - texto, os valore devem ser estritamente SIM ou NÃO e
 **Dependências:** N/A
 
 **Critérios de aceite:**
-- Menu interno aparecendo conforme descrição
+- Fluxo de criação aparecendo com sucesso.
 
 - Impressão do preenchimento do usuário seguindo a ordem:
  - Titulo
  - Descrição
  - Publicado - Sim/Não
 
-**Tamanho da tarefa:**
+**Tamanho da tarefa:** 3
 
-**Atribuído para:**
+**Atribuído para:** Bruno e Renata
 
 **Comentários/pensamentos/consideracoes da tarefa**:
 
