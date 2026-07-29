@@ -5,11 +5,7 @@ public class Questionnaire {
     private String descricaoQuestionario;
     private QuestionnaireStatus statusQuestionario;
     
-    Questionnaire(String nomeQuestionario, String descricaoQuestionario, QuestionnaireStatus statusQuestionario) {
-        this.nomeQuestionario = nomeQuestionario;
-        this.descricaoQuestionario = descricaoQuestionario;
-        this.statusQuestionario = QuestionnaireStatus.valueOf(descricaoQuestionario);
-    }
+    public Questionnaire() {}
 
     public String getNomeQuestionario() {
         return nomeQuestionario;
@@ -21,5 +17,17 @@ public class Questionnaire {
 
     public QuestionnaireStatus getStatusQuestionario() {
         return statusQuestionario;
+    }
+
+    public void setNomeQuestionario(String nomeQuestionario) {
+        this.nomeQuestionario = nomeQuestionario;
+    }
+
+    public void setDescricaoQuestionario(String descricaoQuestionario) {
+        this.descricaoQuestionario = descricaoQuestionario;
+    }
+
+    public void setStatusQuestionario(QuestionnaireStatus statusQuestionario) {
+        this.statusQuestionario = statusQuestionario;
     }
 }
