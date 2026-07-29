@@ -3,11 +3,11 @@ package com.awesomequestionnaires;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import com.awesomequestionnaires.domain.Questionnaire;
+import com.awesomequestionnaires.domain.QuestionnaireStatus;
+
 public class Main {
     public static void main(String[] args) {
-        String nomeQuestionario;
-        String descricaoQuestionario;
-        String statusQuestionario;
         Scanner sc = new Scanner(System.in);
         boolean loopingMenu = true;
 
@@ -29,33 +29,28 @@ public class Main {
 
                 switch (Integer.parseInt(opcao)) {
                     case 0:
+                        Questionnaire novoQuestionario = new Questionnaire();
                         loopingMenu = false;
+                        
                         System.out.println("1 - Digite o nome do questionario:");
-                        nomeQuestionario = sc.nextLine();
+                        String nomeQuestionario = sc.nextLine();
+                        novoQuestionario.setNomeQuestionario(nomeQuestionario);
+
                         System.out.println("2 - Descrição do questionario:");
-                        descricaoQuestionario = sc.nextLine();
-                        System.out.println("4 - Publicar agora? Sim/Nao");
-                        statusQuestionario = sc.nextLine();
+                        String descricaoQuestionario = sc.nextLine();
+                        novoQuestionario.setDescricaoQuestionario(descricaoQuestionario);
 
-                        if (!"sim".equalsIgnoreCase(statusQuestionario) && !"não".equalsIgnoreCase(statusQuestionario)){
-                            System.out.println("Erro: Valor inválido, tente novamente");
+                        Boolean preencherStatus = true;
+                        while (preencherStatus) {
                             System.out.println("4 - Publicar agora? Sim/Nao");
+                            String statusQuestionario = sc.nextLine();
+                            preencherStatusQuestionario(statusQuestionario, novoQuestionario);
+                            if(novoQuestionario.getStatusQuestionario() != null) {
+                                preencherStatus = false;
+                            }
                         }
 
-                        if (statusQuestionario.equals("sim") || statusQuestionario.equals("SIM")){
-                        System.out.println("Seu questionario: " + nomeQuestionario + " foi publicado!");
-                        statusQuestionario = "PUBLISHED";
-                            System.out.println(statusQuestionario);
-                    }
-
-                        if (statusQuestionario.equals("não") || statusQuestionario.equals("NÃO")){
-                            System.out.println("Seu questionario: " + nomeQuestionario + " não foi publicado!");
-                            statusQuestionario = "DRAFT";
-                            System.out.println(statusQuestionario);
-                        }
-
-                        System.out.println( nomeQuestionario + " | " +descricaoQuestionario+ " | " + statusQuestionario);
-
+                        System.out.println( novoQuestionario.getNomeQuestionario() + " | " + novoQuestionario.getDescricaoQuestionario() + " | " + novoQuestionario.getStatusQuestionario());
 
                         break;
                     case 1:
@@ -81,5 +76,27 @@ public class Main {
                         break;
                 }
             }
+    }
+
+    private static Boolean validarInputStatusQuestionario(String statusQuestionario) {
+        if (!"sim".equalsIgnoreCase(statusQuestionario) && !"não".equalsIgnoreCase(statusQuestionario)){
+            return false;
+        }
+        return true;
+    }
+
+    private static void preencherStatusQuestionario(String inputUsuario, Questionnaire questionnaire) {
+        Boolean inputValido = validarInputStatusQuestionario(inputUsuario);
+        if(inputValido) {
+            if (inputUsuario.equals("sim") || inputUsuario.equals("SIM")){
+                questionnaire.setStatusQuestionario(QuestionnaireStatus.PUBLISHED);
+            }
+
+            if (inputUsuario.equals("não") || inputUsuario.equals("NÃO")){
+                questionnaire.setStatusQuestionario(QuestionnaireStatus.DRAFT);
+            }
+        } else {
+            System.out.println("Erro: Input inválido, por favor, digite Sim ou Não");
+        }
     }
 } 
