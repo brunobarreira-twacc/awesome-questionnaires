@@ -1,13 +1,15 @@
 package com.awesomequestionnaires;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import com.awesomequestionnaires.domain.Questionnaire;
 import com.awesomequestionnaires.domain.QuestionnaireStatus;
+import com.awesomequestionnaires.infra.local.RepositorioDePersistenciaLocal;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         boolean loopingMenu = true;
 
@@ -29,6 +31,8 @@ public class Main {
 
                 switch (Integer.parseInt(opcao)) {
                     case 0:
+                        RepositorioDePersistenciaLocal.criaArquivoQuestionario();
+
                         Questionnaire novoQuestionario = new Questionnaire();
                         loopingMenu = false;
                         
