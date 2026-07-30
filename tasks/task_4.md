@@ -22,8 +22,7 @@ O conteúdo dos arquivos JSON devem ser preenchidos logo após o usuário digita
     "title": "qualquer_titulo_valido",
     "description": "qualquer_descricao_valida",
     "status": "PUBLISHED",
-    "questions": [],
-  
+    "questions": []
 }
 ```
 
