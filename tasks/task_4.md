@@ -18,16 +18,18 @@ O conteúdo dos arquivos JSON devem ser preenchidos logo após o usuário digita
 
 ```json
 {
+    "id": "qualquer UUID válido", 
     "title": "qualquer_titulo_valido",
     "description": "qualquer_descricao_valida",
     "status": "PUBLISHED",
-    "questions": []
+    "questions": [],
+  
 }
 ```
 
 Observações:
 
-- O nome dos arquivos de questionário de seguir o seguinte padrão: timestamp + id do questionario(uuid)
+- O nome dos arquivos de questionário deve seguir o seguinte padrão: timestamp + id do questionario(uuid)
 - O campo status pode variar o valor de "PUBLISHED" ou "DRAFT" ou "DISCARDED"
 - O campo questions em todo questionário tem o valor de uma lista vazia e não será tratado nesta tarefa
 
