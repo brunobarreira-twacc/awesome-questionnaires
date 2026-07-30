@@ -8,11 +8,11 @@
 
 **Descrição técnica:**
 
-O objetivo deste item de trabalho é, ao acessar o fluxo de criação de questionário:
+O objetivo deste item de trabalho é ao acessar o fluxo de criação de questionário:
 
-- O programa deve chegar na raiz do projeto(fora da pasta src) se a pasta com o nome questionários existe.
+- O programa deve chegar na raiz do projeto(fora da pasta src) e verificar se a pasta com o nome questionários existe:
     - se SIM: Crie um novo arquivo json dentro dessa pasta com um objeto({}) vazio por hora.
-    - se NÃO: Crie uma nova pasta com o nome questionário
+    - se NÃO: Crie uma nova pasta com o nome - questionarios
 
 O conteúdo dos arquivos JSON devem ser preenchidos logo após o usuário digitar se o questionário será publicado ou não. Ao abrir um arquivo de questionário é esperado encontrar a seguinte estrutura: 
 
@@ -27,7 +27,7 @@ O conteúdo dos arquivos JSON devem ser preenchidos logo após o usuário digita
 
 Observações:
 
-- O nome dos arquivos de questionário de seguir o seguinte padrão: timestamp + id do questionario(uuid)
+- O nome dos arquivos de questionário deve seguir o seguinte padrão: timestamp + id do questionario(uuid)
 - O campo status pode variar o valor de "PUBLISHED" ou "DRAFT" ou "DISCARDED"
 - O campo questions em todo questionário tem o valor de uma lista vazia e não será tratado nesta tarefa
 
