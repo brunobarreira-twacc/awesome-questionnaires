@@ -3,6 +3,7 @@ package com.awesomequestionnaires.infra.local;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.UUID;
 
 public class RepositorioDePersistenciaLocal {
     public static String criaArquivoQuestionario() throws IOException {
@@ -10,9 +11,7 @@ public class RepositorioDePersistenciaLocal {
         String nomePasta = "questionarios";
         Path raiz = Path.of("").toAbsolutePath();
         Path diretorioQuestionarios = raiz.resolve(nomePasta);
-        System.out.println(raiz);
-        System.out.println(diretorioQuestionarios);
-        Files.createDirectory(diretorioQuestionarios);
+        Files.createDirectories(diretorioQuestionarios);
 
         return "WIP - criaArquivoQuestionario";
     }
