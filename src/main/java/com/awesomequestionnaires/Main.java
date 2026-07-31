@@ -13,7 +13,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean loopingMenu = true;
 
-        while (loopingMenu) {
+       try {
+         while (loopingMenu) {
 
             System.out.printf("====================================\nSaudacao do Questionarios Incriveis.\n====================================\n");
             String menuPrincipal = "Digite 0 para criar um novo questionario\n" + //
@@ -80,6 +81,9 @@ public class Main {
                         break;
                 }
             }
+       } catch (Exception e) {
+            throw e;
+       }
     }
 
     private static Boolean validarInputStatusQuestionario(String statusQuestionario) {
