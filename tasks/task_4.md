@@ -42,6 +42,6 @@ Observações:
  - Formato JSON
  - Mesma estrutura apresentada no exemplo da descrição técnica.
 
-**Tamanho da tarefa:** 
+**Tamanho da tarefa:** 3
 
-**Atribuído para:** 
+**Atribuído para:** Bruno e Renata
