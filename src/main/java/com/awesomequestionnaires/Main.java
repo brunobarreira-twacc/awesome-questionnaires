@@ -32,7 +32,7 @@ public class Main {
 
                 switch (Integer.parseInt(opcao)) {
                     case 0:
-                        RepositorioDePersistenciaLocal.criaArquivoQuestionario();
+                        RepositorioDePersistenciaLocal.criarDiretorioArquivoQuestionario();
 
                         Questionnaire novoQuestionario = new Questionnaire();
                         loopingMenu = false;
