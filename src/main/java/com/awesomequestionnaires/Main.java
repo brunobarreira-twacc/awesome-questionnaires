@@ -55,7 +55,7 @@ public class Main {
                             }
                         }
 
-                        System.out.println( novoQuestionario.getNomeQuestionario() + " | " + novoQuestionario.getDescricaoQuestionario() + " | " + novoQuestionario.getStatusQuestionario());
+                        System.out.println( novoQuestionario.getNomeQuestionario() + " | " + novoQuestionario.getDescricaoQuestionario() + " | " + novoQuestionario.getStatusQuestionario() + " | " + novoQuestionario.getId() + " | " + novoQuestionario.getQuestions());
 
                         break;
                     case 1:
