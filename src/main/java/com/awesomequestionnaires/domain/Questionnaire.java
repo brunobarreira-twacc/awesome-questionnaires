@@ -1,6 +1,5 @@
 package com.awesomequestionnaires.domain;
 
-import org.w3c.dom.DOMStringList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +13,18 @@ class Questions {
     public Questions() {
         this.id = UUID.randomUUID();
         this.questionsOptions = new ArrayList<>();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getDisplayText() {
+        return displayText;
+    }
+
+    public List<String> getQuestionsOptions() {
+        return questionsOptions;
     }
 };
 
