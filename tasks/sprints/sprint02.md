@@ -44,7 +44,7 @@ Não houve objetivo de sprint por escrito na sprint 1.
 
 # Sprint 2 · OBJETIVO
 
-**Colocar o objetivo da sprint aqui**
+Tornar a criação de Questionário com Questão e opções de resposta funcional, salvando por completo em um arquivo.
 
 --- 
 
