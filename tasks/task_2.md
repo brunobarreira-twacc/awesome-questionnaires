@@ -58,6 +58,6 @@ Caso o usuário digite qualquer número não mostrado no menu principal, deverá
 
 - Encerramento do programa sem erros
 
-**Tamanho da tarefa:**
+**Tamanho da tarefa:** 3
 
-**Atribuído para:**
+**Atribuído para:** Bruno e Renata
