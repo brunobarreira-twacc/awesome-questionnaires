@@ -1,12 +1,15 @@
 package com.awesomequestionnaires;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import com.awesomequestionnaires.domain.Questionnaire;
 import com.awesomequestionnaires.domain.QuestionnaireStatus;
 import com.awesomequestionnaires.infra.local.RepositorioDePersistenciaLocal;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -32,7 +35,7 @@ public class Main {
 
                 switch (Integer.parseInt(opcao)) {
                     case 0:
-                        RepositorioDePersistenciaLocal.criarDiretorioArquivoQuestionario();
+                        Path arquivoquestionario = RepositorioDePersistenciaLocal.criarDiretorioArquivoQuestionario();
 
                         Questionnaire novoQuestionario = new Questionnaire();
                         loopingMenu = false;
@@ -56,6 +59,12 @@ public class Main {
                         }
 
                         System.out.println( novoQuestionario.getNomeQuestionario() + " | " + novoQuestionario.getDescricaoQuestionario() + " | " + novoQuestionario.getStatusQuestionario() + " | " + novoQuestionario.getId() + " | " + novoQuestionario.getQuestions());
+                        ObjectMapper mapper = new ObjectMapper();
+                        String jsonString = mapper.writeValueAsString(novoQuestionario);
+                        System.out.println(jsonString);
+
+                        System.out.println(arquivoquestionario);
+                        mapper.writeValue(arquivoquestionario.toFile(), novoQuestionario);
 
                         break;
                     case 1:
