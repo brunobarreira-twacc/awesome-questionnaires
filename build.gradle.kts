@@ -27,6 +27,8 @@ dependencies {
     testImplementation("org.mockito:mockito-junit-jupiter:5.23.0")
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
 }
 
 tasks.test {
