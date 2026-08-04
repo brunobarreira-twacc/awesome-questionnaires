@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        // CliContext context = new CliContext(scanner);
+        // CliContext context = new CliContext(sc);
         // Boot cliBoot = new Boot();
         // cliBoot.execute(context);
 
