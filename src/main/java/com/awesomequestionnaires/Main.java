@@ -5,6 +5,8 @@ import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import com.awesomequestionnaires.domain.Question;
+import com.awesomequestionnaires.domain.QuestionTypeOptions;
 import com.awesomequestionnaires.domain.Questionnaire;
 import com.awesomequestionnaires.domain.QuestionnaireStatus;
 import com.awesomequestionnaires.infra.local.RepositorioDePersistenciaLocal;
@@ -60,11 +62,22 @@ public class Main {
 
                         System.out.println( novoQuestionario.getNomeQuestionario() + " | " + novoQuestionario.getDescricaoQuestionario() + " | " + novoQuestionario.getStatusQuestionario() + " | " + novoQuestionario.getId() + " | " + novoQuestionario.getQuestions());
                         ObjectMapper mapper = new ObjectMapper();
-                        String jsonString = mapper.writeValueAsString(novoQuestionario);
-                        System.out.println(jsonString);
-
-                        System.out.println(arquivoquestionario);
                         mapper.writeValue(arquivoquestionario.toFile(), novoQuestionario);
+
+                        System.out.println("Questionário criado com sucesso, agora vamos criar uma pergunta.\n1 - Digite o texto que será exibido para a pessoa usuária que vai responder seu questionário. Esse texto deve obrigatoriamente ser uma pergunta:");
+                        String questionDisplayText = sc.nextLine();
+
+                        Question novaQuestao = new Question();
+                        novaQuestao.setDisplayText(questionDisplayText);
+
+                        System.out.println("\n\n2 - Escolha um tipo de questão:\n" + //
+                        "   1 - Opção única, usuário podem selecionar apenas uma opção para essa questão.\n" + //
+                        "   2 - Múltiplas opções, usuário podem selecionar uma ou mais opções para essa questão.\n" + //
+                        "   3 - Condicional, dada uma resposta condicional, questões adicionais aparecem para o usuário responder.");
+
+                        String questionType = sc.nextLine();
+                        preencherQuestionType(questionType, novaQuestao);
+                        System.out.println("DADOS DA QUESTAO ATUAL " +  "displayText: " + novaQuestao.getDisplayText() + " questionType: " + novaQuestao.getQuestionType() + " questionOptions: " + novaQuestao.getQuestionsOptions());
 
                         break;
                     case 1:
@@ -116,4 +129,12 @@ public class Main {
             System.out.println("Erro: Input inválido, por favor, digite Sim ou Não");
         }
     }
-} 
+
+    private static void preencherQuestionType(String questionType, Question novaQuestao) {
+        if("1".equals(questionType)) {
+            novaQuestao.setQuestionType(QuestionTypeOptions.SINGLE_OPTION);
+            return;
+        }
+        System.out.println("Erro: opcao não implementada. Rode o programa novamente");
+    }
+}
