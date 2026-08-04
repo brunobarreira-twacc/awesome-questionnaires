@@ -77,7 +77,6 @@ public class Main {
 
                         String questionType = sc.nextLine();
                         preencherQuestionType(questionType, novaQuestao);
-                        System.out.println("DADOS DA QUESTAO ATUAL " +  "displayText: " + novaQuestao.getDisplayText() + " questionType: " + novaQuestao.getQuestionType() + " questionOptions: " + novaQuestao.getQuestionsOptions());
 
                         break;
                     case 1:
