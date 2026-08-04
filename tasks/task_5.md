@@ -20,7 +20,7 @@ Ao executar a criação de um Questionário de publicá-lo, o usuário deve ser 
     3 - Condicional, dada uma resposta condicional, questões adicionais aparecem para o usuário responder.
 "
 
-Um novo campo será adicionado aos questionários, chamado "options".
+Um novo campo será adicionado a entidade Questão, chamado "options".
 Este campo é uma lista de opções(não detalhada nesta tarefa) e deve ser vazio nesta tarefa.
 
 Ao final, deverá ser impresso na tela a pergunta com a lista de opções de resposta:
@@ -37,9 +37,9 @@ Ao final, deverá ser impresso na tela a pergunta com a lista de opções de res
 **Dependências:** N/A
 
 **Critérios de aceite:**
-- A questão principal do usuário é grava dentro do arquivo de questionário correto.
+- A questão é impressa no terminal, conforme descrito na tarefa.
 - Campo "options" é preenchido como uma lista vazia
 
-**Tamanho da tarefa:** 
+**Tamanho da tarefa:** 5
 
-**Atribuído para:** 
+**Atribuído para:** Bruno e Renata
