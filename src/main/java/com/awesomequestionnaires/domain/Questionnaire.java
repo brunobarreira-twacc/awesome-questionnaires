@@ -5,35 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-class Questions {
-    private UUID id;
-    private String displayText;
-    private List<String> questionsOptions;
-
-    public Questions() {
-        this.id = UUID.randomUUID();
-        this.questionsOptions = new ArrayList<>();
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public String getDisplayText() {
-        return displayText;
-    }
-
-    public List<String> getQuestionsOptions() {
-        return questionsOptions;
-    }
-};
-
 public class Questionnaire {
     private UUID id;
     private String nomeQuestionario;
     private String descricaoQuestionario;
     private QuestionnaireStatus statusQuestionario;
-    private List<Questions> questions;
+    private List<Question> questions;
 
     public Questionnaire() {
         this.id = UUID.randomUUID();
@@ -68,11 +45,11 @@ public class Questionnaire {
         return id;
     }
 
-    public List<Questions> getQuestions() {
+    public List<Question> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(List<Questions> questions) {
+    public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
 }
