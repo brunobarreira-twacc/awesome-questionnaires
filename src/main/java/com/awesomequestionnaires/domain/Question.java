@@ -7,6 +7,7 @@ import java.util.UUID;
 public class Question {
     private UUID id;
     private String displayText;
+    private QuestionTypeOptions questionType;
     private List<String> questionsOptions;
 
     public Question() {
@@ -24,5 +25,17 @@ public class Question {
 
     public List<String> getQuestionsOptions() {
         return questionsOptions;
+    }
+
+    public void setDisplayText(String displayText) {
+        this.displayText = displayText;
+    }
+
+    public QuestionTypeOptions getQuestionType() {
+        return questionType;
+    }
+
+    public void setQuestionType(QuestionTypeOptions questionType) {
+        this.questionType = questionType;
     }
 }
