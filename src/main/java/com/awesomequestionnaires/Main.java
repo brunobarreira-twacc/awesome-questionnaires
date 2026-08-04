@@ -5,6 +5,8 @@ import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import com.awesomequestionnaires.commandLineInterface.Boot;
+import com.awesomequestionnaires.commandLineInterface.CliContext;
 import com.awesomequestionnaires.domain.Question;
 import com.awesomequestionnaires.domain.QuestionTypeOptions;
 import com.awesomequestionnaires.domain.Questionnaire;
@@ -16,6 +18,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
+        // CliContext context = new CliContext(scanner);
+        // Boot cliBoot = new Boot();
+        // cliBoot.execute(context);
+
         boolean loopingMenu = true;
 
        try {
