@@ -60,7 +60,7 @@ public class Main {
     //                     while (preencherStatus) {
     //                         System.out.println("4 - Publicar agora? Sim/Nao");
     //                         String statusQuestionario = sc.nextLine();
-    //                         preencherStatusQuestionario(statusQuestionario, novoQuestionario);
+    //                         preencherStatusQuestionario(statusQuestionario, novoQuestionario); // ocorre validacao
     //                         if(novoQuestionario.getStatusQuestionario() != null) {
     //                             preencherStatus = false;
     //                         }
@@ -70,11 +70,14 @@ public class Main {
     //                     ObjectMapper mapper = new ObjectMapper();
     //                     mapper.writeValue(arquivoquestionario.toFile(), novoQuestionario);
 
+    //                     // -----
+
     //                     System.out.println("Questionário criado com sucesso, agora vamos criar uma pergunta.\n1 - Digite o texto que será exibido para a pessoa usuária que vai responder seu questionário. Esse texto deve obrigatoriamente ser uma pergunta:");
     //                     String questionDisplayText = sc.nextLine();
 
     //                     Question novaQuestao = new Question();
     //                     novaQuestao.setDisplayText(questionDisplayText);
+
 
     //                     System.out.println("\n\n2 - Escolha um tipo de questão:\n" + //
     //                     "   1 - Opção única, usuário podem selecionar apenas uma opção para essa questão.\n" + //
