@@ -66,6 +66,6 @@ public class CreateQuestionnaire implements MenuAction {
 
         RepositorioDePersistenciaLocal.save(arquivoquestionario.toFile(), novoQuestionario);
 
-        return ExecutionSteps.MAIN_MENU;
+        return ExecutionSteps.CREATE_QUESTION;
     }
 }
