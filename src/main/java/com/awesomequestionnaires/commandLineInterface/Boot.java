@@ -1,5 +1,6 @@
 package com.awesomequestionnaires.commandLineInterface;
 
+import java.io.IOException;
 import java.util.Map;
 
 import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestionnaire;
@@ -13,14 +14,16 @@ public class Boot {
                                 "Digite 3 para sair\n" +
                                 "Por favor, digite sua opcao\n\n";
 
-    public void execute(CliContext context) {
+    public void execute(CliContext context) throws IOException {
 
       boolean loopingMenu = true;
 
+      //2 - PASSOS DE EXEUÇÃO para INSTANCIAS DAS CLASSES DE PASSOS DE EXECUÇÃO
       Map<ExecutionSteps, MenuAction> actions = Map.of(
         ExecutionSteps.CREATE_QUESTIONNAIRE, new CreateQuestionnaire()
       );
 
+      //1 - INPUT DO USUÁRIO para PASSOS DE EXEUÇÃO 
       Map<String, ExecutionSteps> menuOptions = Map.of(
         "0", ExecutionSteps.CREATE_QUESTIONNAIRE,
         "1", ExecutionSteps.MANAGE_QUESTIONNAIRE,
@@ -36,6 +39,6 @@ public class Boot {
         MenuAction action = actions.get(nextStep);
 
         action.execute(context);
-        }
+      }
     }
 }
