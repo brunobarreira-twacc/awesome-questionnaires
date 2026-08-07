@@ -3,6 +3,7 @@ package com.awesomequestionnaires.commandLineInterface;
 import java.io.IOException;
 import java.util.Map;
 
+import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestion;
 import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestionnaire;
 
 public class Boot {
@@ -20,7 +21,8 @@ public class Boot {
 
       //2 - PASSOS DE EXEUÇÃO para INSTANCIAS DAS CLASSES DE PASSOS DE EXECUÇÃO
       Map<ExecutionSteps, MenuAction> actions = Map.of(
-        ExecutionSteps.CREATE_QUESTIONNAIRE, new CreateQuestionnaire()
+        ExecutionSteps.CREATE_QUESTIONNAIRE, new CreateQuestionnaire(),
+        ExecutionSteps.CREATE_QUESTION, new CreateQuestion()
       );
 
       //1 - INPUT DO USUÁRIO para PASSOS DE EXEUÇÃO 
