@@ -5,7 +5,6 @@ import java.util.Map;
 
 import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestion;
 import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestionnaire;
-
 public class Boot {
     
     private String mainMenu = "====================================\nSaudacao do Questionarios Incriveis.\n====================================\n" + 
@@ -36,11 +35,17 @@ public class Boot {
       while(loopingMenu) {
         String userOption = context.ask(mainMenu);
 
-        ExecutionSteps nextStep = menuOptions.getOrDefault(userOption, ExecutionSteps.MAIN_MENU); // CREATE_QUESTIONNAIRE
+        ExecutionSteps nextStep = menuOptions.getOrDefault(userOption, ExecutionSteps.MAIN_MENU);
 
-        MenuAction action = actions.get(nextStep);
+        while(nextStep != null) {
+          MenuAction action = actions.get(nextStep);
 
-        action.execute(context);
+          if(action == null) {
+            break;
+          }
+
+          nextStep = action.execute(context);
+        }
       }
     }
 }
