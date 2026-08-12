@@ -8,7 +8,7 @@ public class Question {
     private UUID id;
     private String displayText;
     private QuestionTypeOptions questionType;
-    private List<String> questionsOptions;
+    private List<QuestionOption> questionsOptions;
 
     public Question() {
         this.id = UUID.randomUUID();
@@ -23,7 +23,7 @@ public class Question {
         return displayText;
     }
 
-    public List<String> getQuestionsOptions() {
+    public List<QuestionOption> getQuestionsOptions() {
         return questionsOptions;
     }
 
@@ -37,5 +37,9 @@ public class Question {
 
     public void setQuestionType(QuestionTypeOptions questionType) {
         this.questionType = questionType;
+    }
+
+    public void setQuestionsOptions(List<QuestionOption> questionsOptions) {
+        this.questionsOptions = questionsOptions;
     }
 }
