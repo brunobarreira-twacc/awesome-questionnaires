@@ -31,7 +31,7 @@ Tornar a criação de Questionário com Questão e opções de resposta funciona
 - Fluxo de criar questão iniciado
 - **Débitos técnicos da sprint anterior resolvidos:**
     - Código ficando difícil para manutenção
-    - Arquitetura inicial implementada, a classe Main faz mais tudo sozinha.
+    - Arquitetura inicial implementada, a classe Main não tem todo o programa dentro de si. Quebramos em actions e etc.
 - Texto de apresentação da questão criado
 - Opções de resposta de uma Questão - em andamento
 
@@ -41,7 +41,7 @@ Tornar a criação de Questionário com Questão e opções de resposta funciona
 
 - **Débitos técnicos da sprint anterior resolvidos:**
     - Código ficando difícil para manutenção
-    - Arquitetura inicial implementada, a classe Main faz mais tudo sozinha.
+   - Arquitetura inicial implementada, a classe Main não tem todo o programa dentro de si. Quebramos em actions e etc.
 
 **Débito técnico precisa ser visível no backlog**
 **Dev → Produto:** qual o impacto de não resolver?
@@ -52,7 +52,7 @@ Tornar a criação de Questionário com Questão e opções de resposta funciona
 
 - **Débitos técnicos da sprint anterior resolvidos:**
     - Código ficando difícil para manutenção
-    - Arquitetura inicial implementada, a classe Main faz mais tudo sozinha.
+    - Arquitetura inicial implementada, a classe Main não tem todo o programa dentro de si. Quebramos em actions e etc.
 
 **Nem todo débito técnico precisa ser pago imediatamente**
 **Dev → Produto:** pagar agora ou aceitar os juros?
