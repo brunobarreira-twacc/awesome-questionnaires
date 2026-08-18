@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestion;
 import com.awesomequestionnaires.commandLineInterface.actions.CreateQuestionnaire;
+import com.awesomequestionnaires.commandLineInterface.actions.SingleOptionQuestion;
 public class Boot {
     
     private String mainMenu = "====================================\nSaudacao do Questionarios Incriveis.\n====================================\n" + 
@@ -21,7 +22,8 @@ public class Boot {
       //2 - PASSOS DE EXEUÇÃO para INSTANCIAS DAS CLASSES DE PASSOS DE EXECUÇÃO
       Map<ExecutionSteps, MenuAction> actions = Map.of(
         ExecutionSteps.CREATE_QUESTIONNAIRE, new CreateQuestionnaire(),
-        ExecutionSteps.CREATE_QUESTION, new CreateQuestion()
+        ExecutionSteps.CREATE_QUESTION, new CreateQuestion(),
+        ExecutionSteps.SINGLE_OPTION_QUESTION, new SingleOptionQuestion()
       );
 
       //1 - INPUT DO USUÁRIO para PASSOS DE EXEUÇÃO 
