@@ -63,3 +63,17 @@ Tornar a criação de Questionário com Questão e opções de resposta funciona
 
 - Falta de testes
 - Mais cuidado com documentação ao longo dos dias da sprint
+
+
+---
+
+# Sprint 3 · 17/08 - 28/08
+
+- Será uma sprint para resolver os transbordos
+- Nosso objetivo está mantido: **Tornar a criação de Questionário com Questão e opções de resposta funcional, salvando por completo em um arquivo.**
+
+---
+
+# Sprint 3 · Mindset de refatoração
+
+- Tudo o que você tocar deve ficar mais bonito depois que você sair
